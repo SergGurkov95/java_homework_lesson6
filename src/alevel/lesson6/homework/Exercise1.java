@@ -13,8 +13,33 @@
 
 package alevel.lesson6.homework;
 
-public class exercise1 {
+public class Exercise1 {
 
+    public static void main(String[] args) {
 
+        Phone firstPhone = new Phone("380931231231", "первая", 123.3);
+        Phone secondPhone = new Phone("380930001112", "вторая", 213.2);
+        Phone thirdPhone = new Phone("380935550555", "десятая", 323.5);
 
+        System.out.println("номер: " + firstPhone.number +
+                "\nмодель: " + firstPhone.model +
+                "\nмасса: " + firstPhone.weight + "г\n");
+
+        System.out.println("номер: " + secondPhone.number +
+                "\nмодель: " + secondPhone.model +
+                "\nмасса: " + secondPhone.weight + "г\n");
+
+        System.out.println("номер: " + thirdPhone.number +
+                "\nмодель: " + thirdPhone.model +
+                "\nмасса: " + thirdPhone.weight + "г\n");
+
+        firstPhone.receiveCall("Маша");
+        System.out.println(firstPhone.getNumber() + "\n");
+
+        secondPhone.receiveCall("Петя");
+        System.out.println(secondPhone.getNumber() + "\n");
+
+        thirdPhone.receiveCall("Саша");
+        System.out.println(thirdPhone.getNumber() + "\n");
+    }
 }
